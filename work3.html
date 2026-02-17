@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PSL Final Ticket Booking</title>
+
+    <!-- Bootstrap CSS (W3 / CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom button - higher specificity than .btn */
+        button.btn.btn-qalandar {
+            background-color: #000;
+            color: gold;
+            border: none;
+        }
+
+        button.btn.btn-qalandar:hover {
+            background-color: gold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">PSL Final Ticket Reservation</h1>
+
+    <form>
+        <!-- Full Name -->
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your full name">
+        </div>
+
+        <!-- CNIC -->
+        <div class="mb-3">
+            <label class="form-label">CNIC Number</label>
+            <input type="text" class="form-control" placeholder="xxxxx-xxxxxxx-x">
+        </div>
+
+        <!-- Enclosure Selection -->
+        <div class="mb-3">
+            <label class="form-label">Select Enclosure</label>
+            <select class="form-select">
+                <option>Imran Khan Enclosure</option>
+                <option>Fazal Mahmood Enclosure</option>
+                <option>Wasim Akram Enclosure</option>
+            </select>
+        </div>
+
+        <!-- Book Ticket Button -->
+        <button type="button"
+                class="btn btn-qalandar"
+                data-bs-toggle="modal"
+                data-bs-target="#bookingModal">
+            Book Ticket
+        </button>
+    </form>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Booking</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p><strong>Match:</strong> PSL Final – Lahore vs Karachi</p>
+                <p><strong>Message:</strong> Confirm your seat?</p>
+                <p class="text-danger">Tickets are non-refundable!</p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-success">Confirm</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
