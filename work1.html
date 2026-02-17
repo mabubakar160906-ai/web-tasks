@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smog Alert - Lahore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<main class="container py-4">
+
+    <!-- HEADER (Top Status Bar) -->
+    <header id="statusBar" class="p-4 text-white text-center rounded mb-4">
+        <h1>🌫 Lahore AQI Dashboard</h1>
+        <h2 id="aqiValue">AQI: 420</h2>
+        <p id="aqiStatus" class="lead"></p>
+    </header>
+
+    <!-- MIDDLE SECTION - INFO CARDS -->
+    <section class="row g-3 mb-4">
+
+        <article class="col-md-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">😷 Mask Required?</h5>
+                    <p id="maskStatus" class="card-text fw-bold"></p>
+                </div>
+            </div>
+        </article>
+
+        <article class="col-md-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">🏫 School Open?</h5>
+                    <p id="schoolStatus" class="card-text fw-bold"></p>
+                </div>
+            </div>
+        </article>
+
+        <article class="col-md-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">🌫 Visibility Level</h5>
+                    <p id="visibilityStatus" class="card-text fw-bold"></p>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- HEALTH ADVICE (Independent Content) -->
+    <article class="alert alert-warning p-4 shadow">
+        <h3>🩺 Health Advice</h3>
+        <ul id="healthAdvice" class="mb-0"></ul>
+    </article>
+
+</main>
+
+<script>
+    // Change this value to test
+    let aqi = 420;
+
+    const statusBar = document.getElementById("statusBar");
+    const aqiStatus = document.getElementById("aqiStatus");
+    const maskStatus = document.getElementById("maskStatus");
+    const schoolStatus = document.getElementById("schoolStatus");
+    const visibilityStatus = document.getElementById("visibilityStatus");
+    const healthAdvice = document.getElementById("healthAdvice");
+
+    document.getElementById("aqiValue").innerText = "AQI: " + aqi;
+
+    if (aqi >= 400) {
+        statusBar.classList.add("bg-danger");
+        aqiStatus.innerText = "Hazardous - Severe Health Risk";
+
+        maskStatus.innerText = "Yes (N95 Required)";
+        schoolStatus.innerText = "Closed";
+        visibilityStatus.innerText = "Very Low";
+
+        healthAdvice.innerHTML = `
+            <li>Stay indoors at all times.</li>
+            <li>Use air purifiers.</li>
+            <li>Avoid outdoor exercise.</li>
+            <li>Wear N95 mask if going outside.</li>
+        `;
+    }
+    else if (aqi < 100) {
+        statusBar.classList.add("bg-success");
+        aqiStatus.innerText = "Air Quality is Safe";
+
+        maskStatus.innerText = "Not Required";
+        schoolStatus.innerText = "Open";
+        visibilityStatus.innerText = "Clear";
+
+        healthAdvice.innerHTML = `
+            <li>Enjoy outdoor activities.</li>
+            <li>Ventilate your home.</li>
+        `;
+    }
+    else {
+        statusBar.classList.add("bg-warning");
+        statusBar.classList.add("text-dark");
+        aqiStatus.innerText = "Unhealthy";
+
+        maskStatus.innerText = "Recommended";
+        schoolStatus.innerText = "Check Government Advisory";
+        visibilityStatus.innerText = "Moderate";
+
+        healthAdvice.innerHTML = `
+            <li>Limit outdoor exposure.</li>
+            <li>Wear a mask outside.</li>
+            <li>Keep windows closed.</li>
+        `;
+    }
+</script>
+
+</body>
+</html>
