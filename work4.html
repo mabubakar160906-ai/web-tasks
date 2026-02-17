@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Freelancing Rate Card</title>
+
+    <!-- Bootstrap CSS (W3Schools / CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .pricing-card {
+            min-height: 420px;   /* Deep Skill: no <br> cheating */
+        }
+
+        .price-box {
+            display: flex;          /* Deep Skill: no &nbsp; */
+            justify-content: center;
+            align-items: baseline;
+            gap: 5px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .dollar {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+
+    <h1 class="text-center mb-5">My Online Services – Rate Card</h1>
+
+    <div class="row g-4">
+
+        <!-- BASIC PLAN -->
+        <div class="col-md-4">
+            <div class="card pricing-card p-3 text-center">
+                <h3>Basic</h3>
+
+                <div class="price-box my-3">
+                    <span class="dollar">$</span>
+                    <span class="price">10</span>
+                </div>
+
+                <p>I will fix your HTML</p>
+
+                <table class="table table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <td>HTML Fixes</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Responsive Design</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Extra Features</td>
+                            <td>❌</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- STANDARD PLAN -->
+        <div class="col-md-4">
+            <div class="card pricing-card p-3 text-center">
+                <h3>Standard</h3>
+
+                <div class="price-box my-3">
+                    <span class="dollar">$</span>
+                    <span class="price">50</span>
+                </div>
+
+                <p>I will make it Responsive</p>
+
+                <table class="table table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <td>HTML Fixes</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Responsive Design</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Extra Features</td>
+                            <td>❌</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PREMIUM PLAN -->
+        <div class="col-md-4">
+            <div class="card pricing-card p-3 text-center">
+                <h3>Premium</h3>
+
+                <div class="price-box my-3">
+                    <span class="dollar">$</span>
+                    <span class="price">100</span>
+                </div>
+
+                <p>I will do everything + Chai ☕</p>
+
+                <table class="table table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <td>HTML Fixes</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Responsive Design</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Extra Features</td>
+                            <td>✅</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
