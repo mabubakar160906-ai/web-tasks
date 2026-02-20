@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chai Dhaba Rate List</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Card */
+.container{
+    background-color: salmon;
+    padding: 25px;
+    border-radius: 15px;
+    width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003333;
+}
+
+/* FLEX CONTAINER */
+.menu{
+    display: flex;
+    flex-wrap: wrap;          /* ⭐ allow next row */
+    gap: 15px;
+    justify-content: center;
+}
+
+/* MENU ITEMS */
+.item{
+    flex: 0 0 200px;          /* ⭐ 2 items per row */
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.item p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price{
+    color: darkred;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.item:hover{
+    background-color: #dff9f9;
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Chai Dhaba Rate List</h2>
+
+    <div class="menu">
+        <div class="item"><p>Samosa</p><div class="price">Price: 100</div></div>
+        <div class="item"><p>Chai</p><div class="price">Price: 100</div></div>
+
+        <div class="item"><p>Jalebi</p><div class="price">Price: 400</div></div>
+        <div class="item"><p>Shami Burger</p><div class="price">Price: 150</div></div>
+
+        <div class="item"><p>Pratha</p><div class="price">Price: 100</div></div>
+        <div class="item"><p>Fries</p><div class="price">Price: 250</div></div>
+
+        <div class="item"><p>Egg-Roll</p><div class="price">Price: 220</div></div>
+        <div class="item"><p>Nestle-water</p><div class="price">Price: 90</div></div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
