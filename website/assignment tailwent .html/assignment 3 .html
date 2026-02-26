@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Video Card - Tailwind</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-10 font-sans">
+
+  <!-- CARD -->
+  <article class="w-[320px] bg-white rounded-[10px] shadow-lg overflow-hidden">
+
+    <!-- IMAGE SECTION -->
+    <div class="relative w-full h-[180px]">
+      <img 
+        src="https://www.youtube.com/watch?v=RiTcQI01fMs" 
+        alt="Video Thumbnail"
+        class="w-full h-full object-cover"
+      >
+
+      <!-- TIME STAMP -->
+      <span class="absolute bottom-2 right-2 bg-black/85 text-white text-xs px-1.5 py-0.5 rounded">
+        1:00
+      </span>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="p-3">
+
+      <!-- NEW BADGE -->
+      <span class="inline-block bg-gray-200 text-gray-600 text-[11px] px-2 py-0.5 rounded mb-1">
+        New
+      </span>
+
+      <!-- TITLE -->
+      <p class="font-bold text-[15px] text-black leading-tight">
+        India v Pakistan
+      </p>
+
+      <!-- META -->
+      <p class="text-gray-600 text-[13px] mt-0.5">
+        Highlights • 1.2M views
+      </p>
+
+    </div>
+
+  </article>
+
+</body>
+</html>
