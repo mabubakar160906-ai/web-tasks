@@ -32,21 +32,30 @@ body{
 
 h2{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #003333;
+}
+
+/* COUNTER */
+#counter{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
 }
 
 /* FLEX CONTAINER */
 .menu{
     display: flex;
-    flex-wrap: wrap;          /* ⭐ allow next row */
+    flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
 }
 
 /* MENU ITEMS */
 .item{
-    flex: 0 0 200px;          /* ⭐ 2 items per row */
+    flex: 0 0 200px;
     background-color: #f2f2f2;
     border-radius: 10px;
     padding: 12px;
@@ -66,9 +75,37 @@ h2{
 }
 
 .item:hover{
-    background-color: #dff9f9;
+    background-color:rgb(82, 230, 222);
     transform: scale(1.03);
     transition: 0.3s;
+}
+
+/* BUTTONS CONTAINER */
+.buttons{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* BUTTON STYLE */
+.buttons button{
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.buttons button:hover{
+    background-color: #003333;
+    color: white;
+    transform: translateY(-2px);
 }
 </style>
 </head>
@@ -78,21 +115,29 @@ h2{
 <div class="container">
     <h2>Chai Dhaba Rate List</h2>
 
+    <!-- COUNTER -->
+    <div id="counter">0</div>
+
+    <!-- MENU -->
     <div class="menu">
         <div class="item"><p>Samosa</p><div class="price">Price: 100</div></div>
         <div class="item"><p>Chai</p><div class="price">Price: 100</div></div>
-
         <div class="item"><p>Jalebi</p><div class="price">Price: 400</div></div>
         <div class="item"><p>Shami Burger</p><div class="price">Price: 150</div></div>
-
         <div class="item"><p>Pratha</p><div class="price">Price: 100</div></div>
         <div class="item"><p>Fries</p><div class="price">Price: 250</div></div>
-
         <div class="item"><p>Egg-Roll</p><div class="price">Price: 220</div></div>
-        <div class="item"><p>Nestle-water</p><div class="price">Price: 90</div></div>
+        <div class="item"><p>Nestle Water</p><div class="price">Price: 90</div></div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <button id="addBtn">Add Chai</button>
+        <button id="removeBtn">Remove Chai</button>
     </div>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
 
